@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  background: #f6f2ec;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+#toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+#palette {
+  display: flex;
+  gap: 6px;
+  margin-right: 10px;
+}
+
+.color {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  cursor: pointer;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+canvas {
+  margin-top: 60px;
+  display: block;
+}
+
+/* PRESENTES */
+.gift {
+  position: fixed;
+  width: 48px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+@keyframes openGift {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2) rotate(10deg); }
+  100% { transform: scale(1); }
+}
+
+.gift.opening {
+  animation: openGift 0.4s ease;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 30;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 420px;
+  position: relative;
+}
+
+.modal-content img {
+  max-width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
