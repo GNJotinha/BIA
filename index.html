@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>🎨 Meu Presente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="toolbar">
+  <div id="palette"></div>
+
+  <button id="brush">🖌️</button>
+  <button id="eraser">🧽</button>
+  <button id="bucket">🪣</button>
+
+  <button id="zoomIn">＋</button>
+  <button id="zoomOut">－</button>
+
+  <button id="save">💾 Salvar</button>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<!-- PRESENTES -->
+<img src="assets/presente1.png" class="gift" style="top:90px; left:20px" data-modal="modal1">
+<img src="assets/presente2.png" class="gift" style="top:160px; left:20px" data-modal="modal2">
+
+<!-- MODAIS -->
+<div class="modal" id="modal1">
+  <div class="modal-content">
+    <span class="close">✖</span>
+    <h2>🎁</h2>
+    <p>Mensagem aqui (você edita)</p>
+  </div>
+</div>
+
+<div class="modal" id="modal2">
+  <div class="modal-content">
+    <span class="close">✖</span>
+    <img src="assets/imagem1.png">
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
